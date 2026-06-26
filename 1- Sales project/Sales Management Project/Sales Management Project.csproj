@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B12C396-EE54-45BF-8C27-405AB844C1FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sales_Management_Project</RootNamespace>
+    <AssemblyName>Sales Management Project</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global\DBHelper.cs" />
+    <Compile Include="View\Deal with Database\frmCreate Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Deal with Database\frmCreate Backup.Designer.cs">
+      <DependentUpon>frmCreate Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Errors\FrmErrorsLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Errors\FrmErrorsLog.Designer.cs">
+      <DependentUpon>FrmErrorsLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Users\frmAddUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Users\frmAddUpdateUser.Designer.cs">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Users\frmUserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Users\frmUserManagement.Designer.cs">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sales\frmSaleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sales\frmSaleManagement.Designer.cs">
+      <DependentUpon>frmSaleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Products\Categories\frmCategoryManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Products\Categories\frmCategoryManagement.Designer.cs">
+      <DependentUpon>frmCategoryManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customers\frmCustomerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Customers\frmCustomerManagement.Designer.cs">
+      <DependentUpon>frmCustomerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repo\RepoOrders.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepoOrders.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Sales\frmAddNewSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sales\frmAddNewSale.Designer.cs">
+      <DependentUpon>frmAddNewSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\ClsValidation.cs" />
+    <Compile Include="View\Customers\frmAddUpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Customers\frmAddUpdateCustomer.Designer.cs">
+      <DependentUpon>frmAddUpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repo\frmProductReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Repo\frmProductReport.Designer.cs">
+      <DependentUpon>frmProductReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Products\frmProductManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Products\frmProductManagement.Designer.cs">
+      <DependentUpon>frmProductManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Products\frmAddNewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Products\frmAddNewProduct.Designer.cs">
+      <DependentUpon>frmAddNewProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\ClsGlobal.cs" />
+    <Compile Include="View\Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repo\RepoAllCategories.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepoAllCategories.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Repo\RepoAllProducts.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepoAllProducts.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Repo\RepoProductSingle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepoProductSingle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Repo\RepoSingleCategory.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepoSingleCategory.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="View\Deal with Database\frmCreate Backup.resx">
+      <DependentUpon>frmCreate Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Errors\FrmErrorsLog.resx">
+      <DependentUpon>FrmErrorsLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sales\frmSaleManagement.resx">
+      <DependentUpon>frmSaleManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Products\Categories\frmCategoryManagement.resx">
+      <DependentUpon>frmCategoryManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Customers\frmAddUpdateCustomer.resx">
+      <DependentUpon>frmAddUpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Customers\frmCustomerManagement.resx">
+      <DependentUpon>frmCustomerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repo\RepoOrders.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepoOrders.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sales\frmAddNewSale.resx">
+      <DependentUpon>frmAddNewSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repo\frmProductReport.resx">
+      <DependentUpon>frmProductReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Products\frmProductManagement.resx">
+      <DependentUpon>frmProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Products\frmAddNewProduct.resx">
+      <DependentUpon>frmAddNewProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Repo\RepoAllCategories.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepoAllCategories.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repo\RepoAllProducts.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepoAllProducts.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repo\RepoProductSingle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepoProductSingle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repo\RepoSingleCategory.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepoSingleCategory.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Users\frmAddUpdateUser.resx">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Users\frmUserManagement.resx">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business Layer\Business Layer.csproj">
+      <Project>{7e72e6e2-8c48-4e51-91e5-82a21baca1bd}</Project>
+      <Name>Business Layer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rewind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-09-03 at 16.17.40_2810ca54.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-forward %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rewind %281%29.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
